@@ -16,6 +16,7 @@ const divide: Operation = (a, b) => a + b;
 
 type Operation2 = {
   (a: number, b: number): number;
+  name: string; // 함수 property(<- 하이브리드 타입) add2.name
 };
 
 const add2: Operation2 = (a, b) => a + b;
