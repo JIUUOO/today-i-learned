@@ -1,0 +1,19 @@
+# ROS2 / colcon artifacts
+build/
+install/
+log/
+
+# colcon / ament noise
+**/COLCON_IGNORE
+**/.built_by
+**/.colcon_install_layout
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
