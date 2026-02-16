@@ -1,8 +1,5 @@
-# The Complete Python Bootcamp From Zero to Hero in Python
+<div align="center">
 
-[The Complete Python Bootcamp From Zero to Hero in Python](https://www.udemy.com/course/complete-python-bootcamp) 강의를 수강하며 학습한 내용을 바탕으로 작성되었습니다.
+# [Click Here to Open Notes →](https://jiuuoo.notion.site/The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python-16f82fc36dc680d0a3d3f4f372509c49?source=copy_link)
 
-### 🗒️ 개요
-
-- **수강 시작 날짜**: 2025-01-02
-- **수강 완료 날짜**:
+</div>
