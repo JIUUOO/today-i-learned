@@ -11,7 +11,7 @@ class MyNode(Node): # inheriting from Node
         self.create_timer(1.0, self.timer_callback) # just registering the function
 
     def timer_callback(self):
-        self.get_logger().info("Hello" + str(self.counter_))
+        self.get_logger().info("Hello aaaaaaa" + str(self.counter_))
         self.counter_ += 1
 
 def main(args=None):
