@@ -3,10 +3,10 @@
 
 using namespace std::chrono_literals;
 
-class RobotNewsStationNode : public rclcpp::Node 
+class RobotNewsStationNode : public rclcpp::Node
 {
 public:
-    RobotNewsStationNode() : Node("robot_news_station") , robot_name_("R2D2")
+    RobotNewsStationNode() : Node("robot_news_station"), robot_name_("R2D2")
     {
         publisher_ = this->create_publisher<example_interfaces::msg::String>("robot_news", 10);
         timer_ = this->create_wall_timer(0.5s, std::bind(&RobotNewsStationNode::publishNews, this));
@@ -28,10 +28,10 @@ private:
 
 };
 
-int main(int argc, char **argv)
+int main(int argc, char** argv)
 {
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<RobotNewsStationNode>(); 
+    auto node = std::make_shared<RobotNewsStationNode>();
     rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;
