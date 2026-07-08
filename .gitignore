@@ -6,3 +6,5 @@ node_modules/
 
 profile_default/
 ipython_config.py
+
+/autoencoders-generative-models/data/
