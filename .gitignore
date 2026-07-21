@@ -9,3 +9,4 @@ ipython_config.py
 
 data/
 __pycache__/
+*.pt
