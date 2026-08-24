@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
@@ -15,7 +17,8 @@ eval_iters = 200
 torch.manual_seed(1337)
 
 # wget https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt
-with open('input.txt', 'r', encoding='utf-8') as f:
+input_path = Path(__file__).with_name('input.txt')
+with input_path.open('r', encoding='utf-8') as f:
     text = f.read()
 
 # here are all the unique characters that occur in this text
@@ -45,6 +48,7 @@ def get_batch(split):
 
 @torch.no_grad()
 def estimate_loss():
+    """averages up the loss over multiple batches"""
     out = {}
     model.eval()
     for split in ['train', 'val']:
@@ -53,7 +57,7 @@ def estimate_loss():
             X, Y = get_batch(split)
             logits, loss = model(X, Y)
             losses[k] = loss.item()
-        out[split] = losses.mean()
+        out[split] = losses.mean() # here
     model.train()
     return out
 
